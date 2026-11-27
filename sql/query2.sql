@@ -1,1 +1,20 @@
-SELECT * FROM dual;
+SELECT FIRST_NAME,
+       CASE
+           WHEN UPPER(SUBSTR(FIRST_NAME, 1, 1))
+                IN (CHR(65), CHR(69), CHR(73), CHR(79), CHR(85))
+           THEN 'comença per vocal'
+       END AS RESULTAT
+FROM EMPLOYEES
+WHERE UPPER(SUBSTR(FIRST_NAME, 1, 1))
+      IN (CHR(65), CHR(69), CHR(73), CHR(79), CHR(85))
+UNION
+SELECT FIRST_NAME,
+       CASE
+           WHEN UPPER(SUBSTR(FIRST_NAME, 1, 1))
+                NOT IN (CHR(65), CHR(69), CHR(73), CHR(79), CHR(85))
+           THEN 'comença per consonant'
+       END AS RESULTAT
+FROM EMPLOYEES
+WHERE UPPER(SUBSTR(FIRST_NAME, 1, 1))
+      NOT IN (CHR(65), CHR(69), CHR(73), CHR(79), CHR(85))
+ORDER BY RESULTAT ASC, FIRST_NAME DESC;

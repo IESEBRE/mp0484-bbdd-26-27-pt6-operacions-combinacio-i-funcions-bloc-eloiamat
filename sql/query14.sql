@@ -1,1 +1,4 @@
-SELECT * FROM dual;
+SELECT UPPER(first_name || ' ' || last_name),
+       LENGTH(first_name || ' ' || last_name) caracters
+FROM employees
+ORDER BY last_name, first_name;

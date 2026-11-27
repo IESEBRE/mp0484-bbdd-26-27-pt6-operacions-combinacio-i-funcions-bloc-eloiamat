@@ -1,1 +1,2 @@
-SELECT * FROM dual;
+SELECT MONTHS_BETWEEN(LAST_DAY(SYSDATE), SYSDATE) mesos_que_queden_al_mes
+FROM dual;
