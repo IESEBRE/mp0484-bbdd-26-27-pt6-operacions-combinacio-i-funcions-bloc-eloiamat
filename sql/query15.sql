@@ -1,3 +1,5 @@
-SELECT FIRST_NAME, LAST_NAME, ROUND(SALARY, -2)
-FROM EMPLOYEES
-ORDER BY 3 DESC, 2 ASC;
+SELECT first_name,
+       last_name,
+       ROUND(salary, -2) sou_arrodonit
+FROM employees
+ORDER BY sou_arrodonit DESC, last_name, first_name;
