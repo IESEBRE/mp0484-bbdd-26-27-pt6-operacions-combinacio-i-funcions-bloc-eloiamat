@@ -1,11 +1,11 @@
-SELECT 'Sou màxim', MAX(SALARY)
+SELECT 'sou màxim', MAX(SALARY)
 FROM EMPLOYEES
 UNION ALL
-SELECT 'Sou mínim', MIN(SALARY)
+SELECT 'sou mínim', MIN(SALARY)
 FROM EMPLOYEES
 UNION ALL
-SELECT 'Mitjana dels sous', AVG(SALARY)
+SELECT 'mitjana dels sous', AVG(SALARY)
 FROM EMPLOYEES
 UNION ALL
-SELECT 'Suma dels sous', SUM(SALARY)
+SELECT 'suma dels sous dels empleats', SUM(SALARY)
 FROM EMPLOYEES;
