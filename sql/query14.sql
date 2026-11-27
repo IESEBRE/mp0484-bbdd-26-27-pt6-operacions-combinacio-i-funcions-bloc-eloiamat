@@ -1,3 +1,2 @@
-SELECT UPPER(first_name || ' ' || last_name) ||
-       LENGTH(first_name || Last_name)
+SELECT LENGTH(first_name || ' ' || last_name), UPPER(first_name || ' ' || last_name)
 FROM employees;
